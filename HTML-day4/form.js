@@ -4,7 +4,7 @@ var uname=form.Username.value;
 var email=form.email.value;
 var number=form.number.value;
 var number_re=/(6|7|8|9)\d{9}$/;
-var email_re=/\S+@\S+\.\S/
+var email_re=/\S+@\S+\.\S/;
 if(uname.length<6)
 {
 alert("required atleast 6 characters");
