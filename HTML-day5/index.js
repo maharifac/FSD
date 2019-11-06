@@ -159,23 +159,81 @@
 // console.log(bike1.getDetails());
 /* Inheritance */
 
-class Person{
-    constructor(){
-        this.name="unni";
-    }
-}
-class Student extends Person{
-    constructor(id)
-    {
-        super();
-        this.id=id;
-    }
-    toString(){
-        return(`Name of person:${this.name},
-        student ID: ${this.id}`);
+// class Person{
+//     constructor(){
+//         this.name="unni";
+//     }
+// }
+// class Student extends Person{
+//     constructor(id)
+//     {
+//         super();
+//         this.id=id;
+//     }
+//     toString(){
+//         return(`Name of person:${this.name},
+//         student ID: ${this.id}`);
 
-    }
-}
+//     }
+// }
 
-let student1= new Student(22);
-console.log(student1.toString());
+// let student1= new Student(22);
+// console.log(student1.toString());
+
+// const args=[1,2,3,4,11,19];
+// function test(args,callback)
+// {
+//     console.log(args);
+//     callback(args);
+// }
+
+
+
+
+
+// function getUser(id,callback)
+// {
+// setTimeout(()=>{callback({Id:id,Name:"Meera"});},2000);
+
+// }
+
+// console.log("Before");
+// getUser(1,(user)=>{
+//     console.log(user);
+//     console.log("finished");
+// });
+
+
+
+
+// var promise1=new Promise(function(resolve,reject){
+// const x=10;
+// const y=10;
+// if(x===y)
+// {
+//     resolve();
+// }
+// else{
+//     reject();
+// }
+// });
+
+
+// promise1.then(function(){console.log('equal')}),
+// function(){
+//     console.log("not equal:");
+// }
+
+
+
+async function f(){
+    let promise=new Promise((resolve,reject)=>{ var x=2;
+    y=3;
+setTimeout(()=>{if(x==y){resolve("done");}else{reject("rejected");}}),2000});
+await promise.
+then(function(msg){console.log(msg)}
+).catch(function(err){
+    console.log(err);
+})    ;
+}
+f();
