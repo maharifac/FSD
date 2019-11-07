@@ -226,14 +226,115 @@
 
 
 
-async function f(){
-    let promise=new Promise((resolve,reject)=>{ var x=2;
-    y=3;
-setTimeout(()=>{if(x==y){resolve("done");}else{reject("rejected");}}),2000});
-await promise.
-then(function(msg){console.log(msg)}
-).catch(function(err){
-    console.log(err);
-})    ;
-}
-f();
+// async function f(){
+//     let promise=new Promise((resolve,reject)=>{ var x=2;
+//     y=3;
+// setTimeout(()=>{if(x==y){resolve("done");}else{reject("rejected");}}),2000});
+// await promise.
+// then(function(msg){console.log(msg)}
+// ).catch(function(err){
+//     console.log(err);
+// })    ;
+// }
+// f();
+
+/* 07/11/19 Promise workout */
+
+// var promise1= new Promise(function(resolve,rejected){
+// setTimeout(()=>{
+//     resolve({id:1,name:"meera"});
+// },1000);
+// });
+// promise1.then(function(obj){
+// console.log(obj.name);  
+// }).
+// then(function(){
+//     return new Promise(function(resolve,reject){
+
+//         setTimeout(()=>{
+//         resolve( "to second then");
+//         },1000);
+//     });
+
+
+    
+// }).
+// then(function(a){
+// console.log(a);
+// }).
+// then(function(){
+//     console.log("To third then");
+// }).catch(function(err)
+// {
+// console.log("Error kids");
+// });
+
+
+// Promise inside a function
+
+// async function myF(id){
+
+// return await new Promise(function(resolve,reject){
+//     setTimeout(()=>{resolve({id:id,name:"unni"});
+//     },1000);
+// });
+// }
+
+// myF(21).then(function(usr){
+// console.log(usr);
+// });
+
+// $(document).ready(function(){
+//     $("h1").click(function(){
+//         $(this).hide();
+//     })
+// });
+
+
+// $(document).ready(function () {
+//     $("#btn").click(function () {
+//         if ($("#box").val() == 1) {
+//             $("#myDiv").text("Fruits");
+//         }
+//         else {
+//             $("#myDiv").text("Cars");
+//         }
+//     })
+
+
+
+// //$("input[type='checkbox']").hide();
+// $('input[type="checkbox"]').change(function () 
+// {
+//     if(this.checked) {
+//         $("#myDiv").text($(this).val()+"<br>");
+//     }
+   
+// })
+// })
+
+
+$(document).ready(function()
+{
+$('input[type="radio"]').change(function(){
+    var a=$(this).val();
+
+    if(a=="fruits")
+    {
+$("#myDiv").html("<ul><li>apple</li><li>orange</li></ul>")
+    }
+    else if(a=="cars"){
+        $("#myDiv").html("<ul><li>Toyota</li><li>suzuki</li></ul>")
+    }
+ else if(a=="animals"){
+    $("#myDiv").html("<ul><li>cat</li><li>dog</li></ul>")
+ }
+    
+
+
+})
+
+
+
+
+})
