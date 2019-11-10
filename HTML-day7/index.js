@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 $(document).ready(function()
 {
@@ -20,3 +21,10 @@ $('input[type="checkbox"]').change(function(){
 
 
 })
+=======
+$(document).ready(function(){
+$('input[type="checkbox]').change(function()
+
+{}
+)});
+>>>>>>> 2778703220021f17fd07c360b9d95b19aad07320
